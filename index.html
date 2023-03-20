@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <form id="formulario">
+        <h1>Formulario</h1>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+">
+      <br>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]+">
+      <br>
+      <label for="matricula">Matrícula:</label>
+      <input type="text" id="matricula" name="matricula" required pattern="[0-9]{4}-[0-9]{4}">
+      <br>
+      <label for="materia">Materia:</label>
+      <input type="text" id="materia" name="materia" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]+">
+      <br>
+      <label for="nota">Nota:</label>
+      <input type="number" id="nota" name="nota" required min="0" max="100">
+      <br>
+      <button type="reset" onclick="limpiarFormulario()">Limpiar</button>
+      <button type="button" onclick="agregarDatos()">Agregar</button>
+    </form>
+    <br>
+ 
+<table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Matrícula</th>
+        <th>Materia</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-datos">
+      
+    </tbody>
+  </table>
